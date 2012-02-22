@@ -1,0 +1,117 @@
+auto: false
+server: false
+lsi: false
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:day/:title
+paginate: 10
+wikiversions:
+  - name: master
+    value: 0
+  - name: 2.0
+    value: 1
+projects:
+  - name: ninject
+    revisions:
+      0:"",
+      1:"6174f3a58c221179ef2f00ea3540143ea1d7cc51"
+  - name: ninject.web.mvc
+    revisions:
+      0:"",
+      1:"5f9adb0cc1b24d6e0da86ed75cfb88fe86669d5d"
+extensions:
+  - title: Ninject.Web.Common
+    description: This is the base for all WEB extensions and the WCF extension. It must be installed whenever you use one of them.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.web.common
+  - title: Ninject.Web.Mvc
+    description: Allows integration between Ninject and <a href="http://asp.net/mvc">ASP.NET MVC</a>. MVC1 + MVC2 support are implemented by Nate Kohari.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: http://github.com/ninject/ninject.web.mvc
+  - title: Ninject.Web
+    description: Allows integration between Ninject and ASP.NET WebForms. Originally by Nate Kohari, ported to Ninject 2.0 by Ian Davis.
+    email: ian@innovatian.com
+    author: Ian Davis
+    website: https://github.com/ninject/ninject.web
+  - title: Ninject.Extensions.Wcf
+    description: Allows integration between Ninject and the Windows Communication Framework (WCF). Initially by Ian Davis, hugely refactored and improved by Remo Gloor.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.extensions.wcf
+  - title: Ninject.Extensions.Conventions
+    description: Provides configuration by conventions for Ninject.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.extensions.conventions
+  - title: Ninject.Extensions.Factory
+    description: Adds support for automatically cenerated fatories that create new instances using ninject.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.extensions.factory
+  - title: Ninject.Extensions.Interception
+    description: Originally by Nate Kohari, ported to Ninject 2.0 and enhanced by Ian Davis
+    email: ian@innovatian.com
+    author: Ian Davis
+    website: https://github.com/ninject/ninject.extensions.interception
+  - title: Ninject.Extensions.NamedScope
+    description: Added three new Scope types, InNamedScope to define that objects are the scope for their dependencies, InCallScope to define that one instance is created for each resolve on the kernel and InParentScope to add transient tracking support.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.extensions.namedscope
+  - title: Ninject.Extensions.ContextPreservation
+    description: Preserves the context over factories. That way you know where the factory that issued the resolve request lives. This extension is often used together with Named Scope.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.extensions.contextpreservation
+  - title: Ninject.Extensions.ChildKernel
+    description: Adds support for container hierarchies to Ninject.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.extensions.childkernel
+  - title: Ninject.Extensions.DependencyCreation
+    description: Allows that at the creation of one objects several others are created too. This is usually used toghether with an event broker to create completely decoupled designs, where components do not know eachother directly anymore.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.extensions.dependencycreation
+  - title: Ninject.Web.Mvc.FluentValidation
+    description: Adds support for MVC fluent validation.
+    email:
+    author: Sean Chambers
+    website: https://github.com/ninject/ninject.web.mvc.fluentvalidation
+  - title: Ninject.Extensions.Logging
+    description: Adds support for injection of loggers (log4net or nlog).  Originally by Nate Kohari, ported to Ninject 2.0 by Ian Davis.
+    email: ian@innovatian.com
+    author: Ian Davis
+    website: https://github.com/ninject/ninject.extensions.logging
+  - title: Ninject.Extensions.bbvEventBroker
+    description: Allows a many-to-many publish/subscribe model between loosely-coupled components held together by weaks events to automatically disconnect publishers/subscribers. This extension uses the powerful <a href="http://code.google.com/p/bbvcommon/wiki/EventBrokerTutorial">bbvEventBroker</a>
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.extensions.bbveventbroker
+  - title: Ninject.Extensions.WeakEventMessageBroker
+    description: Allows a many-to-many publish/subscribe model between loosely-coupled components held together by weaks events to automatically disconnect publishers/subscribers. Originally based on Ninject.Extensions.MessageBroker.
+    email: ian@innovatian.com
+    author: Ian Davis
+    website: https://github.com/ninject/ninject.extensions.weakeventmessagebroker
+  - title: Ninject.Extensions.MessageBroker
+    description: Allows a many-to-many publish/subscribe model between loosely-coupled components. Originally by Nate Kohari, ported to Ninject 2.0 by Ian Davis.
+    email: ian@innovatian.com
+    author: Ian Davis
+    website: https://github.com/ninject/ninject.extensions.messagebroker
+  - title: Ninject.Extensions.Xml
+    description: Allows users to define bindings using XML rather than code. Originally by Nate Kohari. Greatly refactored and added extensibility support for the Ninject extensions by Remo Gloor.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.extensions.xml
+  - title: Ninject.MockingKernel
+    description: Provides auto-mocking container infrastructure. Currently comes with built in support for <a href="http://moq.me/">Moq</a>, <a href="http://www.ayende.com/projects/rhino-mocks.aspx">RhinoMocks</a> and <a href="http://nsubstitute.github.com/">NSubstitute</a>.
+    email: remo.gloor@gmail.com
+    author: Remo Gloor
+    website: https://github.com/ninject/ninject.mockingkernel
+  - title: Ninject.Extensions.WF
+    description: Provides support for the injection for workflows of the workflow fondation.
+    email: daniel.marbach@planetgeek.ch
+    author: Daniel Marbach
+    website: https://github.com/ninject/ninject.extensions.wf

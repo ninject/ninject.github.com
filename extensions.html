@@ -1,0 +1,41 @@
+---
+layout: default
+title: Extensions
+---
+
+<h2 class="section-header">
+    Extensions from the community
+</h2>
+    
+<div id="grid-container" class="container_12">
+    <div class="grid_12">
+        <div class="note">
+            Got a cool extension for Ninject that you want to share? Let us know, and we'll list it here.
+        </div>
+    </div>
+    <div class="grid_12">	
+{% for extension in site.extensions %}
+        <h3>{{ extension.title }}</h3>
+        <p>{{ extension.description }}</p>
+        <ul>
+            <li>
+                <strong>Author:</strong>
+				<a href="mailto:{{ extension.email }}">{{ extension.author }}</a>
+            </li>
+            <li>
+                <strong>Website:</strong>
+                <a href="{{ extension.website }}">{{ extension.website }}</a>
+            </li>
+            <li>
+                <strong>Wiki:</strong>
+                <a href="{{ extension.website }}/wiki">{{ extension.website }}/wiki</a>
+            </li>
+        </ul>
+{% endfor %}	
+    </div>
+</div>
+<script type="text/javascript">
+	$(function() {
+	    initializeDefaultLayout();
+	});	
+</script>
