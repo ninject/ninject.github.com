@@ -144,7 +144,9 @@ Syntax.trimSpaces = function (text) {
 			
 			return "";
 		});
- 	}    
+ 	}  
+
+    text = $.trim("x" + text).substring(1);	
 
 	return {text: text, offsets: offsets};
 };
