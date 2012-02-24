@@ -45,8 +45,9 @@ title: Open source dependency injector for .NET
 			<pre class="syntax brush-csharp">
 				public class Samurai {
 					public IWeapon Weapon { get; private set; }
-					public Samurai(IWeapon weapon) {
-						Weapon = weapon;
+					public Samurai(IWeapon weapon) 
+					{
+						this.Weapon = weapon;
 					}
 				}
 			</pre>
@@ -56,9 +57,11 @@ title: Open source dependency injector for .NET
 		<div class="last code-sample">
 			<h3>...and let Ninject glue it together for you.</h3>
 			<pre class="syntax brush-csharp">
-				public class WarriorModule : NinjectModule {
-					public override void Load() {
-						Bind&lt;IWeapon&gt;().To&lt;Sword&gt;();
+				public class WarriorModule : NinjectModule
+				{
+					public override void Load() 
+					{
+						this.Bind&lt;IWeapon&gt;().To&lt;Sword&gt;();
 					}
 				}
 			</pre>
