@@ -19,6 +19,9 @@ projects:
     revisions:
       0:"",
       1:"5f9adb0cc1b24d6e0da86ed75cfb88fe86669d5d"
+  - name: ninject.extensions.factory
+    revisions:
+      0:""
 extensions:
   - title: Ninject.Web.Common
     description: This is the base for all WEB extensions and the WCF extension. It must be installed whenever you use one of them.
