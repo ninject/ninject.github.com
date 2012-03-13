@@ -1,6 +1,48 @@
----
-layout: default
-title: Open source dependency injector for .NET
----
+<!DOCTYPE html>
+<html>
+<head>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+</style>
+</head>
+<body>
+  <p>Testing CORS:</p>
+  <p>
+    <strong id="result"></strong>
+  </p>
+</body>
+<script type="text/javascript">
+// detect IE CORS transport
+if ('XDomainRequest' in window && window.XDomainRequest !== null) {
 
-<h1>yeah running on ninject.github.com!</h1>
+  // override default jQuery transport
+  jQuery.ajaxSettings.xhr = function() {
+      try { return new XDomainRequest(); }
+      catch(e) { }
+  };
+  
+  // also, override the support check
+  jQuery.support.cors = true;
+
+}
+
+// now you can use jQuery to do cross-domain requests on IE8+
+jQuery.ajax({
+  url: 'http://manu.sporny.org/rdfa/cors',
+  type: 'GET',
+  success: function(response) {
+    $("#result").text(response);
+  },
+  error: function() {
+    $("#result").text('FAILURE');
+  }
+});
+</script>
+</html>
