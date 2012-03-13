@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+</style>
+</head>
+<body>
+  <p>Testing CORS:</p>
+  <p>
+    <strong id="result"></strong>
+  </p>
+</body>
+<script type="text/javascript">
+
+var xdr = new XDomainRequest();  
+xdr.onload = function(){  
+    $.("#result").text(xdr.responseText);  
+};  
+xdr.open("GET", url);  
+xdr.send();
+
+</script>
+</html>
