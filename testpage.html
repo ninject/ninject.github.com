@@ -20,21 +20,18 @@
 </body>
 <script type="text/javascript">
 // detect IE CORS transport
-alert("starting");
 if ('XDomainRequest' in window && window.XDomainRequest !== null) {
 
-  alert("configure XDomainRequest");
   // override default jQuery transport
   jQuery.ajaxSettings.xhr = function() {
       try { return new XDomainRequest(); }
-      catch(e) { }
+      catch(e) { alert (e.Message); }
   };
   
   // also, override the support check
   jQuery.support.cors = true;
 
 }
-alert("done");
 
 // now you can use jQuery to do cross-domain requests on IE8+
 jQuery.ajax({
@@ -43,9 +40,10 @@ jQuery.ajax({
   success: function(response) {
     $("#result").text(response);
   },
-  error: function() {
-    $("#result").text('FAILURE');
-  }
+                error:function (xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
 });
 </script>
 </html>
