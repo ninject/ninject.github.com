@@ -38,6 +38,7 @@ jQuery.ajax({
   url: 'http://manu.sporny.org/rdfa/cors',
   type: 'GET',
   success: function(response) {
+    alert("response");
     $("#result").text(response);
   },
                 error:function (xhr, ajaxOptions, thrownError){
