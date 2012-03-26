@@ -52,13 +52,16 @@ title: Wiki
 	}
 	
 	$(function() {
-	    jQuery.support.cors = true;
-	    initializeDefaultLayout();
-		$(window).bind('hashchange', function(e) {
-			showNavigation('ninject', 'ninject', "Navigation", '#wiki-navigation');
-			showWikiPage('ninject', 'ninject', '', '#wiki-content2');
-		});
-		$(window).trigger('hashchange');
+	    if (!$.browser.msie)
+	    {
+		    jQuery.support.cors = true;
+		    initializeDefaultLayout();
+			$(window).bind('hashchange', function(e) {
+				showNavigation('ninject', 'ninject', "Navigation", '#wiki-navigation');
+				showWikiPage('ninject', 'ninject', '', '#wiki-content2');
+			});
+			$(window).trigger('hashchange');
+	    }
 	});	
 	
 	var versions = { {% for project in site.projects %}
