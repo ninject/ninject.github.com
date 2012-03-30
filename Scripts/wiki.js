@@ -20,7 +20,7 @@ function getWikiData(userName, repoName, pageName, targetDivisionName, callback)
 		dataType: "json",
 		url: url,
 		success: function(data){ callback(pageName, pageUrl, wikiUrl, targetDivisionName, data.query.results.resources.content); },
-		error: function (XMLHttpRequest, textStatus, errorThrown) {	alert("error: " + errorThrown + ", " + XMLHttpRequest); }
+		error: function (XMLHttpRequest, textStatus, errorThrown) {	alert("Your browser is not supported. Please use an actual version of Chrome, Firefox or Safari."); }
 	});
 	/*	
 	var jqxhr = $.getJSON(url,
