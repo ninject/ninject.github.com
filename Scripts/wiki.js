@@ -78,7 +78,7 @@ function showWikiPageCallback(pageName, pageUrl, wikiUrl, targetDivisionName, co
 			'</div>',
 		'</div>'].join('');
     $(targetDivisionName).html(contentHtml);
-	var styleSheets = content.match(/<[^>]*href="[^"]*github2[^"]*" [^>]*rel="stylesheet"[^>]*>/gm);
+	var styleSheets = content.match(/<[^>]*href="[^"]*github[^"]*" [^>]*rel="stylesheet"[^>]*>/gm);
 	for (var i = 0; i < styleSheets.length; ++i)
 	    $(targetDivisionName).append(styleSheets[i]);
 	

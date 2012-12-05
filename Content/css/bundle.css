@@ -687,11 +687,15 @@ a:active
 {
     color: #ccc;
 }
-#wiki-wrapper.page
+#wiki-content2
 {
-	font-size: 14px
+    color: #ccc;
 }
-
+#wiki-navigation-container
+{
+    font-size: 75%;
+    color: #ccc;
+}
 #container
 {
 	width: 960px;
