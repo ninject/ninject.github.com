@@ -23,7 +23,10 @@ function getWikiData(userName, repoName, pageName, targetDivisionName, callback)
 		error: function (XMLHttpRequest, textStatus, errorThrown) {	alert("Your browser is not supported. Please use an actual version of Chrome, Firefox or Safari."); }
 	});*/
 		
-	$.getJSON(url, callback).error(function() { alert("Your browser is not supported. Please use an actual version of Chrome, Firefox or Safari."); })
+	$.getJSON(url, callback).error(function(jqXHR, textStatus, errorThrown) 
+	    { 
+		    alert("Your browser is not supported. Please use an actual version of Chrome, Firefox or Safari.<br><br>Error Details: " + errorThrown); 
+		})
 }
 
 function getPageUrl(pageName)
