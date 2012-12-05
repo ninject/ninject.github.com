@@ -1,37 +1,54 @@
 function getWikiData(userName, repoName, pageName, targetDivisionName, callback)
 {
-	var pageName = pageName || 'Home';
-	pageUrl = pageName.replace(/ /g, "-");
-	pageUrl = pageUrl.replace(/%20/g, "-");
-	pageName = pageName.replace(/%20/g, " ");
+	var pageUrl = getPageUrl(pageName);
+	var pageName = getPageName(pageName);
+
 	var version = getVersion(repoName);
 	if (version != "")
     {
 	    version = "/" + version;
 	}
 	
-	var	wikiUrl = ['https://github.com/', userName, '/', repoName, '/wiki/'].join(''),
+	var	wikiUrl = getWikiUrl(userName, repoName);
 		url = [
 		"http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20data.headers%20where%20url%3D%22",
 		wikiUrl, pageUrl, version, 
-		"%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"].join('');
-	$.ajax({
+		"%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=?"].join('');
+		
+	/*$.ajax({
 		type: "GET",
-		dataType: "json",
+		dataType: "jsonp",
 		url: url,
-		success: function(data){ callback(pageName, pageUrl, wikiUrl, targetDivisionName, data.query.results.resources.content); },
+		//success: function(data){ callback(pageName, pageUrl, wikiUrl, targetDivisionName, data.query.results.resources.content); },
 		error: function (XMLHttpRequest, textStatus, errorThrown) {	alert("Your browser is not supported. Please use an actual version of Chrome, Firefox or Safari."); }
-	});
-	/*	
-	var jqxhr = $.getJSON(url,
-		function(data) {
-			callback(pageName, pageUrl, wikiUrl, targetDivisionName, data.query.results.resources.content);
-		})
-	.error(function() { alert("error"); })*/
+	});*/
+		
+	$.getJSON(url, callback).error(function() { alert("Your browser is not supported. Please use an actual version of Chrome, Firefox or Safari."); })
+}
+
+function getPageUrl(pageName)
+{
+	var pageName = pageName || 'Home';
+	pageUrl = pageName.replace(/ /g, "-");
+	pageUrl = pageUrl.replace(/%20/g, "-");
+	return pageUrl;
+}
+
+function getPageName()
+{
+	var pageName = pageName || 'Home';
+	pageName = pageName.replace(/%20/g, " ");
+    return pageName;
+}
+
+function getWikiUrl(userName, repoName)
+{
+	return ['https://github.com/', userName, '/', repoName, '/wiki/'].join('');
 }
 
 function showWikiPage(userName, repoName, pageName, targetDivisionName) {
-	getWikiData(userName, repoName, pageName, targetDivisionName, showWikiPageCallback)
+	getWikiData(userName, repoName, pageName, targetDivisionName, 
+	    function(data) { showWikiPageCallback(getPageName(pageName), getPageUrl(pageName), getWikiUrl(userName, repoName), targetDivisionName, data.query.results.resources.content) })
 }
 
 function showNinjectWikiPage(project, pageName)
@@ -67,7 +84,8 @@ function showWikiPageCallback(pageName, pageUrl, wikiUrl, targetDivisionName, co
 
 function showNavigation(userName, repoName, pageName, targetDivisionName)
 {
-	getWikiData(userName, repoName, pageName, targetDivisionName, showNavigationCallback)
+	getWikiData(userName, repoName, pageName, targetDivisionName, 
+    	function(data) { showNavigationCallback(getPageName(pageName), getPageUrl(pageName), getWikiUrl(userName, repoName), targetDivisionName, data.query.results.resources.content) })
 }
 
 function showNavigationCallback(pageName, pageUrl, wikiUrl, targetDivisionName, content)
