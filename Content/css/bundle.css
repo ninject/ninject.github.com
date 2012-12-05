@@ -815,23 +815,23 @@ em
 	padding-right: 10px;
 	background: transparent url(data:image/gif;base64,R0lGODlhCAAJAIAAAE9PT+7k4yH5BAEAAAEALAAAAAAIAAkAAAIQjAMJd5q2HoQLsThty9nJAgA7) no-repeat right center;
 }
-#footer
+#footer-container
 {
-	font-size: 1.2em;
+	font-size: 12px;
 	line-height: 1.2em;
 	color: #aaa;
 	height: 60px;
 }
-#footer .section
+#footer-container .section
 {
 	margin: 12px;
 }
-#footer .enkari
+#footer-container .enkari
 {
 	float: left;
 	margin-right: 12px;
 }
-#footer .enkari a
+#footer-container .enkari a
 {
 	position: relative;
 	display: block;
@@ -842,25 +842,26 @@ em
 	background-image: url(../images/enkari.png);
 	text-indent: -9999px;
 }
-#footer .enkari a .hover
+#footer-container .enkari a .hover
 {
 	width: 95px;
 	height: 30px;
 	background-position: -95px center;
 }
-#footer a:link
+#footer-container a:link
+{
+	color: #aaa;
+	text-decoration: underline
+}
+#footer-container a:visited
 {
 	color: #aaa;
 }
-#footer a:visited
-{
-	color: #aaa;
-}
-#footer a:hover
+#footer-container a:hover
 {
 	color: #fff;
 }
-#footer a:active
+#footer-container a:active
 {
 	color: #fff;
 }
