@@ -1229,3 +1229,10 @@ div.box
 	background-color: #222;
 	border-color: #333;
 }
+
+#wiki-rightbar {
+    display: none;
+}
+.wiki-actions {
+    display: none;
+}
