@@ -1239,6 +1239,5 @@ div.box
 }
 
 .has-rightbar #wiki-body {
-    display: none;
     margin-right: 40px !important;
 }
