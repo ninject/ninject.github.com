@@ -1233,6 +1233,12 @@ div.box
 #wiki-rightbar {
     display: none;
 }
+
 .wiki-actions {
     display: none;
+}
+
+.has-rightbar #wiki-body {
+    display: none;
+    margin-right: 40px !important;
 }
