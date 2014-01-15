@@ -19,7 +19,7 @@ projects:
     revisions:
       0:"",
       1:"6174f3a58c221179ef2f00ea3540143ea1d7cc51",
-      2:"6174f3a58c221179ef2f00ea3540143ea1d7cc51",
+      2:"80edfcedf68f89c195348ff374f27dfc4ff763f3",
       3:"6174f3a58c221179ef2f00ea3540143ea1d7cc51"
   - name: ninject.web.mvc
     revisions:
