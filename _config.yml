@@ -18,21 +18,27 @@ projects:
   - name: ninject
     revisions:
       0:"",
-      1:"6174f3a58c221179ef2f00ea3540143ea1d7cc51"
-      2:"6174f3a58c221179ef2f00ea3540143ea1d7cc51"
+      1:"6174f3a58c221179ef2f00ea3540143ea1d7cc51",
+      2:"6174f3a58c221179ef2f00ea3540143ea1d7cc51",
       3:"6174f3a58c221179ef2f00ea3540143ea1d7cc51"
   - name: ninject.web.mvc
     revisions:
       0:"",
-      1:"5f9adb0cc1b24d6e0da86ed75cfb88fe86669d5d"
-      2:"5f9adb0cc1b24d6e0da86ed75cfb88fe86669d5d"
+      1:"5f9adb0cc1b24d6e0da86ed75cfb88fe86669d5d",
+      2:"5f9adb0cc1b24d6e0da86ed75cfb88fe86669d5d",
       3:"5f9adb0cc1b24d6e0da86ed75cfb88fe86669d5d"
   - name: ninject.extensions.factory
     revisions:
-      0:""
+      0:"",
+      1:"",
+      2:"",
+      3:""
   - name: ninject.extensions.xml
     revisions:
-      0:""      
+      0:"",      
+      1:"",
+      2:"",
+      3:""
 extensions:
   - title: Ninject.Web.Common
     description: This is the base for all WEB extensions and the WCF extension. It must be installed whenever you use one of them.
