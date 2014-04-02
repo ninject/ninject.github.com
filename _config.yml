@@ -135,3 +135,8 @@ extensions:
     email: daniel.marbach@planetgeek.ch
     author: Daniel Marbach
     website: https://github.com/ninject/ninject.extensions.wf
+  - title: Ninject.Extensions.Quartz
+    description: Provides a default implementation for the Quartz.NET Job Scheduler. It provides an ISchedulerFactory implementation, and optionally provides the IScheduler as a singleton.
+    email: mark.huber@dealertrack.com
+    author: Mark Huber
+    website: https://github.com/dtinteractive/Ninject.Extensions.Quartz
