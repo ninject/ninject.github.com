@@ -131,7 +131,7 @@ extensions:
     author: Remo Gloor
     website: https://github.com/ninject/ninject.mockingkernel
   - title: Ninject.Extensions.WF
-    description: Provides support for the injection for workflows of the workflow fondation.
+    description: Provides support for the injection for workflows of the workflow foundation.
     email: daniel.marbach@planetgeek.ch
     author: Daniel Marbach
     website: https://github.com/ninject/ninject.extensions.wf
