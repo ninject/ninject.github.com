@@ -721,6 +721,7 @@ h1
 	height: 280px;
 	background: transparent url(../images/splash.png) no-repeat 12px bottom;
 	text-indent: -9999em;
+	z-index: 1;
 }
 h2.section-header
 {
