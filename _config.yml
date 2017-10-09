@@ -2,7 +2,7 @@ auto: false
 server: false
 lsi: false
 markdown: rdiscount
-pygments: true
+highlighter: rouge
 permalink: /:year/:month/:day/:title
 paginate: 10
 wikiversions:
