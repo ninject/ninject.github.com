@@ -140,3 +140,8 @@ extensions:
     email: mark.huber@dealertrack.com
     author: Mark Huber
     website: https://github.com/dtinteractive/Ninject.Extensions.Quartz
+  - title: Ninject.Extensions.Azure
+    description: Adds support for Microsoft Azure Worker Roles.
+    email: philipp.dolder@gmail.com
+    author: Philipp Dolder
+    website: https://github.com/ninject/ninject.extensions.azure
